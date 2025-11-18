@@ -1,0 +1,73 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4edcfa88-ee0d-4120-860a-7aa1aba25cf4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ALPR</Name>
+    <RootNamespace>ALPR</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aplr_final.py" />
+    <Compile Include="cnn\train_cnn.py" />
+    <Compile Include="detect_with_yolo.py" />
+    <Compile Include="main.py" />
+    <Compile Include="predict.py" />
+    <Compile Include="test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cnn\" />
+    <Folder Include="cnn\dataset_chars\" />
+    <Folder Include="dataset\" />
+    <Folder Include="dataset\images\" />
+    <Folder Include="dataset\images\val\" />
+    <Folder Include="dataset\images\train\" />
+    <Folder Include="dataset\labels\" />
+    <Folder Include="dataset\labels\val\" />
+    <Folder Include="dataset\labels\train\" />
+    <Folder Include="yolo\" />
+    <Folder Include="yolo\dataset\" />
+    <Folder Include="yolo\dataset\images\" />
+    <Folder Include="yolo\dataset\labels\" />
+    <Folder Include="yolo\runs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12.jpeg" />
+    <Content Include="dataset\images\train\04a37de9-22.jpeg" />
+    <Content Include="dataset\images\train\06c69ed5-3.jpg" />
+    <Content Include="dataset\images\train\0b6c855e-26.jpeg" />
+    <Content Include="dataset\images\train\1a8b8f3e-13.jpeg" />
+    <Content Include="dataset\images\train\1d1a69d6-1.jpg" />
+    <Content Include="dataset\images\train\1dc30424-20.jpeg" />
+    <Content Include="dataset\images\train\2bf31914-17.jpeg" />
+    <Content Include="dataset\images\train\3fc9e052-2.jpg" />
+    <Content Include="dataset\images\train\4d4fb808-34.jpeg" />
+    <Content Include="dataset\images\train\5af74ff8-14.jpeg" />
+    <Content Include="dataset\images\train\5b367e49-10.jpg" />
+    <Content Include="dataset\images\train\7b52a8a9-8.jpg" />
+    <Content Include="mydata.yaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
